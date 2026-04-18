@@ -4,31 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek Kumar — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
+    <!-- ══ PROGRESS BAR ══ -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ══════════════════════════════════
+         NAVIGATION BAR
+    ══════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+
+        <!-- Brand name in Playfair Display -->
+        <a class="nav-brand" href="#hero">Abhishek Kumar</a>
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero"         class="nav-link">Home</a></li>
+          <li><a href="#summary"      class="nav-link">Summary</a></li>
+          <li><a href="#competencies" class="nav-link">Skills</a></li>
+          <li><a href="#project1"     class="nav-link">Projects</a></li>
+          <li><a href="#internship"   class="nav-link">Experience</a></li>
+          <li><a href="#education"    class="nav-link">Education</a></li>
+          <li><a href="#softskills"   class="nav-link">Soft Skills</a></li>
+          <li><a href="#contact"      class="nav-link contact-btn">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero"         class="mobile-link">Home</a>
+        <a href="#summary"      class="mobile-link">Summary</a>
+        <a href="#competencies" class="mobile-link">Skills</a>
+        <a href="#project1"     class="mobile-link">Projects</a>
+        <a href="#internship"   class="mobile-link">Experience</a>
+        <a href="#education"    class="mobile-link">Education</a>
+        <a href="#softskills"   class="mobile-link">Soft Skills</a>
+        <a href="#contact"      class="mobile-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
     <!-- ══════════════════════════════════
          SECTION 1 — HERO
     ══════════════════════════════════ -->
-    <section class="hero-section">
+    <section class="hero-section reveal" id="hero">
       <div class="card">
         <div class="img-side">
-          <img
-            src="https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?w=600&q=80"
-            alt="Abhishek Kumar — developer at desk"
-          />
+          <img src="https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?w=600&q=80" alt="Abhishek Kumar"/>
         </div>
         <div class="content-side">
-          <h1 class="name">Abhishek Kumar<span class="cursor"></span></h1>
+          <h1 class="name" id="heroName"><span class="typed-name"></span><span class="cursor"></span></h1>
           <div class="divider"></div>
           <p class="subtitle">Software Developer | .NET | Web Development</p>
-          <p class="bio">
-            Computer Engineering graduate passionate about building clean,
-            efficient web applications. Open to opportunities in
-            <strong>Noida, Pune, Remote, Hybrid,</strong> or
-            <strong>Onsite</strong> roles.
-          </p>
+          <p class="bio">Computer Engineering graduate passionate about building clean, efficient web applications. Open to opportunities in <strong>Noida, Pune, Remote, Hybrid,</strong> or <strong>Onsite</strong> roles.</p>
           <div class="tags">
             <span class="tag tag-light">ENTRY-LEVEL</span>
             <span class="tag tag-dark">FULL-STACK .NET</span>
@@ -41,35 +82,17 @@
     <!-- ══════════════════════════════════
          SECTION 2 — PROFILE SUMMARY
     ══════════════════════════════════ -->
-    <section class="summary-section">
+    <section class="summary-section reveal" id="summary">
       <div class="summary-inner">
         <div class="summary-left">
           <h2 class="summary-heading">Profile Summary</h2>
-
-          <div class="summary-card">
-            <h3 class="sc-title">Technical Foundation</h3>
-            <p class="sc-body">Strong fundamentals in .NET Core, C#, React.js, SQL, and Web Development with hands-on project experience.</p>
-          </div>
-          <div class="summary-card">
-            <h3 class="sc-title">API &amp; Database Skills</h3>
-            <p class="sc-body">Good understanding of REST APIs, React component development, database design, and basic debugging.</p>
-          </div>
-          <div class="summary-card">
-            <h3 class="sc-title">Problem Solver</h3>
-            <p class="sc-body">Knowledge of Data Structures &amp; Algorithms with a quick-learning mindset and positive attitude.</p>
-          </div>
-          <div class="summary-card">
-            <h3 class="sc-title">Growth Mindset</h3>
-            <p class="sc-body">Actively improving through online courses, certifications, and building real-time practice applications.</p>
-          </div>
+          <div class="summary-card reveal-child"><h3 class="sc-title">Technical Foundation</h3><p class="sc-body">Strong fundamentals in .NET Core, C#, React.js, SQL, and Web Development with hands-on project experience.</p></div>
+          <div class="summary-card reveal-child"><h3 class="sc-title">API &amp; Database Skills</h3><p class="sc-body">Good understanding of REST APIs, React component development, database design, and basic debugging.</p></div>
+          <div class="summary-card reveal-child"><h3 class="sc-title">Problem Solver</h3><p class="sc-body">Knowledge of Data Structures &amp; Algorithms with a quick-learning mindset and positive attitude.</p></div>
+          <div class="summary-card reveal-child"><h3 class="sc-title">Growth Mindset</h3><p class="sc-body">Actively improving through online courses, certifications, and building real-time practice applications.</p></div>
         </div>
-
-        <div class="summary-right">
-          <img
-            src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=800&q=80"
-            alt="Developer working at computer"
-            class="summary-img"
-          />
+        <div class="summary-right reveal-child">
+          <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=800&q=80" alt="Developer working" class="summary-img"/>
         </div>
       </div>
     </section>
@@ -77,96 +100,256 @@
     <!-- ══════════════════════════════════
          SECTION 3 — CORE COMPETENCIES
     ══════════════════════════════════ -->
-    <section class="competencies-section">
+    <section class="competencies-section reveal" id="competencies">
       <div class="competencies-inner">
-
         <h2 class="comp-heading">Core Competencies</h2>
-
         <div class="comp-body">
-
-          <!-- Tree diagram -->
           <div class="comp-tree-wrap">
             <svg class="comp-tree-svg" viewBox="0 0 440 560" xmlns="http://www.w3.org/2000/svg">
-              <!-- Vertical spine -->
-              <line x1="216" y1="10" x2="216" y2="550" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-
-              <!-- Horizontal branches -->
-              <line x1="100"  y1="70"  x2="216" y2="70"  stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="228"  y1="70"  x2="336" y2="70"  stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="100"  y1="185" x2="216" y2="185" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="228"  y1="185" x2="336" y2="185" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="100"  y1="310" x2="216" y2="310" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="228"  y1="310" x2="336" y2="310" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="100"  y1="430" x2="216" y2="430" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <line x1="228"  y1="430" x2="336" y2="430" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
-
-              <!-- Dots on spine -->
-              <circle cx="216" cy="70"  r="4" fill="#111"/>
-              <circle cx="216" cy="185" r="4" fill="#111"/>
-              <circle cx="216" cy="310" r="4" fill="#111"/>
-              <circle cx="216" cy="430" r="4" fill="#111"/>
-              <circle cx="216" cy="10"  r="4" fill="#111"/>
-              <circle cx="216" cy="550" r="4" fill="#111"/>
+              <line x1="216" y1="10"  x2="216" y2="550" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="100" y1="70"  x2="216" y2="70"  stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="228" y1="70"  x2="336" y2="70"  stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="100" y1="185" x2="216" y2="185" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="228" y1="185" x2="336" y2="185" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="100" y1="310" x2="216" y2="310" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="228" y1="310" x2="336" y2="310" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="100" y1="430" x2="216" y2="430" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="228" y1="430" x2="336" y2="430" stroke="#333" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <circle cx="216" cy="10"  r="4" fill="#111"/><circle cx="216" cy="70"  r="4" fill="#111"/>
+              <circle cx="216" cy="185" r="4" fill="#111"/><circle cx="216" cy="310" r="4" fill="#111"/>
+              <circle cx="216" cy="430" r="4" fill="#111"/><circle cx="216" cy="550" r="4" fill="#111"/>
             </svg>
-
-            <!-- Left boxes -->
-            <div class="tree-box tree-left" style="top:36px">
-              <span class="tb-title">.NET Core &amp;<br>&amp; C# Basics</span>
-              <span class="tb-sub">Basic concepts of C# &amp; framework</span>
-            </div>
-            <div class="tree-box tree-left" style="top:152px">
-              <span class="tb-title">React<br>Knowledge</span>
-              <span class="tb-sub">Components, hooks, state management</span>
-            </div>
-            <div class="tree-box tree-left" style="top:276px">
-              <span class="tb-title">Object-Oriented<br>Programming</span>
-              <span class="tb-sub">OOP principles &amp; design patterns</span>
-            </div>
-            <div class="tree-box tree-left" style="top:396px">
-              <span class="tb-title">REST API<br>Basics</span>
-              <span class="tb-sub">Understanding API principles</span>
-            </div>
-
-            <!-- Right boxes -->
-            <div class="tree-box tree-right" style="top:36px">
-              <span class="tb-title">Frontend<br>Development</span>
-              <span class="tb-sub">HTML, CSS, JavaScript basics</span>
-            </div>
-            <div class="tree-box tree-right" style="top:152px">
-              <span class="tb-title">SQL &amp; Databases</span>
-              <span class="tb-sub">Fundamentals &amp; relational<br>database concepts</span>
-            </div>
-            <div class="tree-box tree-right" style="top:276px">
-              <span class="tb-title">Data Structures</span>
-              <span class="tb-sub">Arrays, lists, trees, algorithms</span>
-            </div>
-            <div class="tree-box tree-right" style="top:396px">
-              <span class="tb-title">Debugging &amp;<br>Version Control</span>
-              <span class="tb-sub">Git/GitHub &amp; troubleshooting tools</span>
-            </div>
+            <div class="tree-box tree-left reveal-child" style="top:36px"><span class="tb-title">.NET Core &amp; C# Basics</span><span class="tb-sub">Basic concepts of C# &amp; framework</span></div>
+            <div class="tree-box tree-left reveal-child" style="top:152px"><span class="tb-title">React Knowledge</span><span class="tb-sub">Components, hooks, state management</span></div>
+            <div class="tree-box tree-left reveal-child" style="top:276px"><span class="tb-title">Object-Oriented<br>Programming</span><span class="tb-sub">OOP principles &amp; design patterns</span></div>
+            <div class="tree-box tree-left reveal-child" style="top:396px"><span class="tb-title">REST API Basics</span><span class="tb-sub">Understanding API principles</span></div>
+            <div class="tree-box tree-right reveal-child" style="top:36px"><span class="tb-title">Frontend Development</span><span class="tb-sub">HTML, CSS, JavaScript basics</span></div>
+            <div class="tree-box tree-right reveal-child" style="top:152px"><span class="tb-title">SQL &amp; Databases</span><span class="tb-sub">Fundamentals &amp; relational database concepts</span></div>
+            <div class="tree-box tree-right reveal-child" style="top:276px"><span class="tb-title">Data Structures</span><span class="tb-sub">Arrays, lists, trees, algorithms</span></div>
+            <div class="tree-box tree-right reveal-child" style="top:396px"><span class="tb-title">Debugging &amp; Version Control</span><span class="tb-sub">Git/GitHub &amp; troubleshooting tools</span></div>
           </div>
-
-          <!-- Technical Stack -->
           <div class="tech-stack">
             <h3 class="stack-heading">Technical Stack</h3>
-
-            <div class="stack-card">
-              <p class="stack-title">Frontend</p>
-              <p class="stack-body">ReactJS, JavaScript, HTML5, CSS3</p>
-            </div>
-            <div class="stack-card">
-              <p class="stack-title">Backend</p>
-              <p class="stack-body">.NET Core, C#, Web API</p>
-            </div>
-            <div class="stack-card">
-              <p class="stack-title">Database</p>
-              <p class="stack-body">SQL Server, Stored Procedures, LINQ</p>
-            </div>
+            <div class="stack-card reveal-child"><p class="stack-title">Frontend</p><p class="stack-body">ReactJS, JavaScript, HTML5, CSS3</p></div>
+            <div class="stack-card reveal-child"><p class="stack-title">Backend</p><p class="stack-body">.NET Core, C#, Web API</p></div>
+            <div class="stack-card reveal-child"><p class="stack-title">Database</p><p class="stack-body">SQL Server, Stored Procedures, LINQ</p></div>
           </div>
-
-        </div><!-- /.comp-body -->
-      </div><!-- /.competencies-inner -->
+        </div>
+      </div>
     </section>
 
+    <!-- ══════════════════════════════════
+         SECTION 4 — PROJECT: STUDENT MGMT
+    ══════════════════════════════════ -->
+    <section class="project-section reveal" id="project1">
+      <div class="project-inner">
+        <h2 class="project-heading">Project: Student Management System</h2>
+        <div class="project-body proj-img-left">
+          <div class="project-img-wrap reveal-child">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Student Management System" class="project-img"/>
+          </div>
+          <div class="project-details reveal-child">
+            <div class="proj-tags">
+              <span class="proj-tag">REACT.JS</span><span class="proj-tag">.NET CORE</span><span class="proj-tag">SQL SERVER</span><span class="proj-tag">BOOTSTRAP</span>
+            </div>
+            <ul class="proj-list">
+              <li>Built frontend with React components, hooks, and forms; connected to backend via Axios/Fetch API</li>
+              <li>Developed REST APIs in .NET Core for CRUD operations</li>
+              <li>Designed SQL Server database tables for student records</li>
+              <li>Tested API responses using Postman</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 5 — PROJECT: EXPENSE TRACKER
+    ══════════════════════════════════ -->
+    <section class="project-section project-section--alt reveal" id="project2">
+      <div class="project-inner">
+        <h2 class="project-heading">Project: Expense Tracker Web Application</h2>
+        <div class="project-body proj-img-right">
+          <div class="project-details reveal-child">
+            <div class="proj-tags">
+              <span class="proj-tag">REACT.JS</span><span class="proj-tag">.NET CORE</span><span class="proj-tag">SQL SERVER</span><span class="proj-tag">CHART.JS</span>
+            </div>
+            <ul class="proj-list">
+              <li>Created React UI pages for recording daily expenses with form validation using controlled components</li>
+              <li>Built .NET Core backend APIs for adding and fetching expenses</li>
+              <li>Stored expense data in SQL Server</li>
+              <li>Displayed expense summaries using Chart.js / Recharts</li>
+            </ul>
+          </div>
+          <div class="project-img-wrap reveal-child">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="Expense Tracker" class="project-img"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 6 — INTERNSHIP
+    ══════════════════════════════════ -->
+    <section class="internship-section reveal" id="internship">
+      <div class="internship-inner">
+        <div class="internship-img-wrap reveal-child">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Developer at office" class="internship-img"/>
+        </div>
+        <div class="internship-content">
+          <h2 class="internship-heading">Internship Experience</h2>
+          <div class="timeline">
+            <div class="tl-line"></div>
+            <div class="tl-item reveal-child"><div class="tl-num">1</div><div class="tl-connector"></div><div class="tl-body"><h3 class="tl-title">Linux World</h3><p class="tl-date"><em>Jan 2024 – March 2024</em></p></div></div>
+            <div class="tl-item reveal-child"><div class="tl-num">2</div><div class="tl-connector"></div><div class="tl-body"><h3 class="tl-title">Web Development</h3><p class="tl-desc">Created sample webpages using HTML &amp; CSS; learned UI development fundamentals</p></div></div>
+            <div class="tl-item reveal-child"><div class="tl-num">3</div><div class="tl-connector"></div><div class="tl-body"><h3 class="tl-title">Version Control</h3><p class="tl-desc">Learned Git workflows and basic project collaboration practices</p></div></div>
+            <div class="tl-item reveal-child"><div class="tl-num">4</div><div class="tl-connector"></div><div class="tl-body"><h3 class="tl-title">Testing &amp; Debugging</h3><p class="tl-desc">Practiced basic debugging and testing of webpages</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 7 — EDUCATION
+    ══════════════════════════════════ -->
+    <section class="education-section reveal" id="education">
+      <div class="education-inner">
+        <h2 class="edu-heading">Education</h2>
+        <div class="edu-body">
+          <div class="edu-card reveal-child">
+            <h3 class="edu-degree">B.Tech — Computer Science &amp; Engineering</h3>
+            <p class="edu-college">KIPM College of Engineering</p>
+            <p class="edu-grad">Graduated: <strong>2024</strong></p>
+          </div>
+          <div class="edu-learning reveal-child">
+            <h3 class="edu-kla-heading">Key Learning Areas</h3>
+            <ul class="edu-list">
+              <li>Software Engineering &amp; Web Development</li>
+              <li>Database Management Systems</li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Object-Oriented Programming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 8 — SOFT SKILLS
+    ══════════════════════════════════ -->
+    <section class="soft-skills-section reveal" id="softskills">
+      <div class="soft-skills-inner">
+        <h2 class="ss-heading">Soft Skills</h2>
+        <div class="ss-grid">
+          <div class="ss-item reveal-child">
+            <div class="ss-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M16 8h8v4a2 2 0 0 0 4 0V8h4v8h-4a2 2 0 0 0 0 4h4v8h-8v-4a2 2 0 0 0-4 0v4H8v-8h4a2 2 0 0 0 0-4H8V8h8z" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <h3 class="ss-title">Problem Solving</h3>
+            <p class="ss-body">Strong analytical thinking with DSA knowledge for tackling technical challenges.</p>
+          </div>
+          <div class="ss-item reveal-child">
+            <div class="ss-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M14 10h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2v4l-5-4H14a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2z" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 16H8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h1v3l4-3h5a2 2 0 0 0 2-2v-1" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <h3 class="ss-title">Communication</h3>
+            <p class="ss-body">Clear communicator in English and Hindi, comfortable in team settings.</p>
+          </div>
+          <div class="ss-item reveal-child">
+            <div class="ss-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="13" r="4" stroke="#111" stroke-width="1.8"/><path d="M10 30c0-5.523 4.477-8 10-8s10 2.477 10 8" stroke="#111" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="15" r="3" stroke="#111" stroke-width="1.6"/><path d="M4 30c0-4 2.5-6 5-6" stroke="#111" stroke-width="1.6" stroke-linecap="round"/><circle cx="31" cy="15" r="3" stroke="#111" stroke-width="1.6"/><path d="M36 30c0-4-2.5-6-5-6" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3 class="ss-title">Team Collaboration</h3>
+            <p class="ss-body">Works well in group environments with a positive, adaptive attitude.</p>
+          </div>
+          <div class="ss-item reveal-child">
+            <div class="ss-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="#111" stroke-width="1.8"/><path d="M20 12v8l5 4" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 class="ss-title">Time Management</h3>
+            <p class="ss-body">Organized and deadline-focused, balancing projects and continuous learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 9 — PERSONAL DETAILS
+    ══════════════════════════════════ -->
+    <section class="personal-section reveal" id="personal">
+      <div class="personal-inner">
+        <h2 class="personal-heading">Personal Details</h2>
+        <div class="personal-grid reveal-child">
+          <div class="personal-cell"><p class="personal-label">Date of Birth</p><p class="personal-value">4th June 2002</p></div>
+          <div class="personal-cell personal-cell--right"><p class="personal-label">Languages</p><p class="personal-value">English, Hindi</p></div>
+          <div class="personal-cell personal-cell--bottom"><p class="personal-label">Location</p><p class="personal-value">Gorakhpur, Uttar Pradesh</p></div>
+          <div class="personal-cell personal-cell--right personal-cell--bottom"><p class="personal-label">Open To</p><p class="personal-value">Noida · Pune · Remote · Hybrid · Onsite</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 10 — GET IN TOUCH
+    ══════════════════════════════════ -->
+    <section class="contact-section reveal" id="contact">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <h2 class="contact-heading">Get In Touch</h2>
+          <div class="contact-card reveal-child">
+            <p class="contact-label">Email</p>
+            <p class="contact-value"><a href="mailto:abhishekkumar60209@gmail.com">abhishekkumar60209@gmail.com</a></p>
+          </div>
+          <div class="contact-card reveal-child">
+            <p class="contact-label">Phone</p>
+            <p class="contact-value"><a href="tel:+918543895435">+91-8543895435</a></p>
+          </div>
+          <div class="contact-note reveal-child">
+            <span class="contact-note-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#555" stroke-width="1.4"/><path d="M7 10h6M7 13h4" stroke="#555" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <p class="contact-note-text">Eager to contribute to entry-level software development roles. Committed to writing clean code and growing in a professional environment.</p>
+          </div>
+        </div>
+        <div class="contact-right reveal-child">
+          <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=800&q=80" alt="Professional developer" class="contact-img"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         FOOTER
+    ══════════════════════════════════ -->
+    <footer class="footer">
+      <div class="footer-inner">
+
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="footer-name">Abhishek Kumar</span>
+            <span class="footer-tagline">Software Developer · .NET · React.js</span>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="#hero"         class="footer-link">Home</a>
+            <a href="#summary"      class="footer-link">Summary</a>
+            <a href="#competencies" class="footer-link">Skills</a>
+            <a href="#project1"     class="footer-link">Projects</a>
+            <a href="#internship"   class="footer-link">Experience</a>
+            <a href="#education"    class="footer-link">Education</a>
+            <a href="#contact"      class="footer-link">Contact</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:abhishekkumar60209@gmail.com" class="footer-contact-item">
+              <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg>
+              abhishekkumar60209@gmail.com
+            </a>
+            <a href="tel:+918543895435" class="footer-contact-item">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M6 2h3l1.5 4-2 1.5a11 11 0 0 0 4 4L14 9.5 18 11v3a2 2 0 0 1-2 2A15 15 0 0 1 2 4a2 2 0 0 1 2-2h2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              +91-8543895435
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© <span id="footerYear"></span> Abhishek Kumar. All rights reserved.</p>
+          <button class="footer-top-btn" id="footerTopBtn">Back to top ↑</button>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
